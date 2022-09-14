@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<HBox>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Download New Subscription Template"
+			subheader="This template will be used to upload new catalog" mode="HeaderMode" frameType="TwoByOne" press="press">
+			<TileContent>
+				<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>
+			</TileContent>
+		</GenericTile>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Upload Subscription"
+			subheader="This option will be used to upload(or update) new(or existing) catalog" mode="HeaderMode" frameType="TwoByOne" press="press">
+			<TileContent>
+				<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>
+			</TileContent>
+		</GenericTile>
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Download Available Subscription"
+			subheader="Existing Catalog for the selected contract/9COM will be downloaded" mode="HeaderMode" press="press" frameType="TwoByOne">
+			<TileContent>
+				<ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"/>
+			</TileContent>
+		</GenericTile>
+	</HBox>
+</core:FragmentDefinition>

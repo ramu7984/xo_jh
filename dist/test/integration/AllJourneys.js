@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/test/Opa5","./arrangements/Startup","./WorklistJourney","./NavigationJourney","./NotFoundJourney","./ObjectJourney"],function(e,a){"use strict";e.extendConfig({arrangements:new a,viewNamespace:"com.aramco.b2b.Catalog.view.",autoWait:true})});
