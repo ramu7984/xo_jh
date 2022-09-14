@@ -3,26 +3,19 @@
 	<Page showHeader="false" enableScrolling="true" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer">
 		<content>
 			<VBox fitContainer="true">
-				<Toolbar class="sapUiSizeCompact headerBackColor" width="100%" visible="true">
-				<!--<Button type="Back" tooltip="Back"/>-->
+				<!--<Toolbar class="sapUiSizeCompact headerBackColor" width="100%" visible="true">
 				<Image src="./img/Aramco.jpg" width="8%">
-					<!--<layoutData>-->
-					<!--	<FlexItemData growFactor="0"/>-->
-					<!--</layoutData>-->
 				</Image>
-				<!--<ToolbarSpacer />-->
 				<Label text="{i18n>appTitle}" design="Bold" class="headingText"/>
 				<ToolbarSpacer></ToolbarSpacer>
-				<!--<SearchField liveChange=".onSearch" search="onSearchProduct" placeholder="" tooltip="" width="90%"></SearchField>-->
 				<HBox visible="{=!${device>/system/phone}}">
-					<!--<ImageContent src="sap-icon://person-placeholder"/>-->
 					<fr:Avatar displaySize="XS" backgroundColor="Transparent"/>
 					<Label text="Ramakrishna" design="Bold" class="sapUiTinyMarginEnd"/>
 					
 					<Label text=" Phone :" design="Bold"/>
 					<Text text="+966 56 XXXXXXXX"/>
 				</HBox>
-			</Toolbar>
+			</Toolbar>-->
 			<HBox visible="{=!${device>/system/phone}}">
 			<Label text="" design="Bold" class="sapUiTinyMarginEnd"/>
 				</HBox>
@@ -33,11 +26,13 @@
 						</layoutData>
 						<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="Catalog Update">
 							<Label id="labelInContract" displayOnly="true" wrapping="true" text="Contract ID"/>
-							<Select items="{/ContractIDEntitySet}" change="onSelectContractID">
+							<!--<Select items="{/ContractIDEntitySet}" change="onSelectContractID">
 								<items>
 									<c:Item key="{ContractID}" text="{ContractID}"/>
 								</items>
-							</Select>
+							</Select>-->
+							<Text id="contractIDHeader" width="100%"/>
+								
 							<Label id="labelInContractType" displayOnly="true" wrapping="true" text="Contract Type"/>
 							<RadioButtonGroup xmlns="sap.m" columns="1" id="group0">
 								<buttons>
@@ -57,20 +52,19 @@
 						<layoutData>
 							<FlexItemData growFactor="1"/>
 						</layoutData>
+						
 						<items>
 							<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="Subscription ID" width="100%"/>
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="Effective Date" width="100%"/>
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="ExpirationDate" width="100%"/>
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="Price Update Control" width="100%"/>
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="Item udate control" width="100%"/>
-								<Label text="{i18n>SupplierERPID}" width="100%"/>
-								<Text text="Currency" width="100%"/>
+								<Label text="{i18n>SubscriptionID}" width="100%"/>
+								<Text id="subscriptionID"  width="100%"/>
+								<Label text="{i18n>contractID}" width="100%"/>
+								<Text id="contractID" width="100%"/>
+								<Label text="{i18n>9COM}" width="100%"/>
+								<Text id="NINECOMID" width="100%"/>
+								<Label text="{i18n>SubscriptionStatus}" width="100%"/>
+								<Text id="subscriptionStatus" text="{/selObj/0/SubscriptionID}" width="100%"/>
+								<Label text="{i18n>RejectionComments}" width="100%"/>
+								<Text id="rejectionComments" text="{selectedModel>/RejectionComments}" width="100%"/>
 							</f:SimpleForm>
 						</items>
 					</VBox>
@@ -81,7 +75,7 @@
 						<IconTabFilter text="Item Details">
 							<c:Fragment fragmentName="com.aramco.b2b.Catalog..view.fragments.ItemTable" type="XML"/>
 						</IconTabFilter>
-						<IconTabFilter text="Catalog Line Upload">
+						<IconTabFilter text="Update Catalog">
 							<c:Fragment fragmentName="com.aramco.b2b.Catalog..view.fragments.SingleEntry" type="XML"/>
 						</IconTabFilter>
 						<IconTabFilter text="Bulk Upload">

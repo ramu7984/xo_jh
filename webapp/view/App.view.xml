@@ -2,8 +2,19 @@
 	controllerName="com.aramco.b2b.Catalog.controller.App"
 	displayBlock="true"
 	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
 	xmlns:mvc="sap.ui.core.mvc">
-
+	<tnt:ToolHeader>
+		<Button icon="sap-icon://menu2" type="Transparent" />
+		<Image src="./img/Aramco.jpg" width="8%"/>
+		<Label text="{i18n>appTitle}" design="Bold" class="headingText"/>
+		<ToolbarSpacer />
+		<!--<Button icon="sap-icon://search" type="Transparent" />-->
+		<Button icon="sap-icon://task" type="Transparent" />
+		<Button icon="sap-icon://bell" type="Transparent" />
+		<Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" press=".onAvatarPressed" />
+		<Button icon="sap-icon://grid" type="Transparent" />
+	</tnt:ToolHeader>
 	<Shell>
 	<App
 		id="app"

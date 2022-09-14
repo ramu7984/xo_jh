@@ -1,37 +1,73 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
-	
-	<Table id="productsTable"
-		items="{/CatalogItems}">
-		<headerToolbar>
-			<OverflowToolbar>
-		
-			</OverflowToolbar>
-		</headerToolbar>
+		<ScrollContainer
+		height="100%"
+		width="100%"
+		vertical="true"
+		focusable="true">
+				<Table id="productsTable" items="{/CatalogItems}" >
 		<columns>
-			<Column id="productCol" width="12em"><Text text="Product" /></Column>
-			<Column id="supplierCol" minScreenWidth="Tablet" demandPopin="true"><Text text="Supplier" /></Column>
-			<Column id="dimensionsCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="End"><Text text="Dimensions" /></Column>
-			<Column id="weightCol" visible="false" minScreenWidth="Tablet" demandPopin="true" hAlign="Center"><Text text="Weight" /></Column>
-			<Column id="priceCol" hAlign="End"><Text text="Price" /></Column>
+			<Column id="SubscriptionID" ><Text text="{i18n>SubscriptionID}"/></Column>
+			<Column id="ItemStatus" ><Text text="{i18n>ItemStatus}"/></Column>
+			<Column id="MaterialNumber" ><Text text="{i18n>MaterialNumber}"/></Column>
+			<Column id="ContractNumber" ><Text text="{i18n>ContractNumber}"/></Column>
+			<Column id="ContractLineNumber" ><Text text="{i18n>ContractLineNumber}"/></Column>
+			<Column id="SupplierPartID" ><Text text="{i18n>SupplierPartID}"/></Column>
+			<Column id="SupplierID" ><Text text="{i18n>SupplierID}"/></Column>
+			<Column id="ItemDescription" ><Text text="{i18n>ItemDescription}"/></Column>
+			<Column id="UnitPrice" ><Text text="{i18n>UnitPrice}"/></Column>
+			<Column id="MaterialCountryOfOrigin" ><Text text="{i18n>MaterialCountryOfOrigin}"/></Column>
+			<!--<Column id="UnitOfMeasure" ><Text text="{i18n>UnitOfMeasure}"/></Column>
+			<Column id="ShortName" ><Text text="{i18n>ShortName}"/></Column>
+			<Column id="ClassificationCodeDomain" ><Text text="{i18n>ClassificationCodeDomain}"/></Column>
+			<Column id="ClassificationCodeKey" ><Text text="{i18n>ClassificationCodeKey}"/></Column>
+			<Column id="LeadTime" ><Text text="{i18n>LeadTime}"/></Column>
+			<Column id="ContractCurrency" ><Text text="{i18n>ContractCurrency}"/></Column>
+			<Column id="MinimumQuantity" ><Text text="{i18n>MinimumQuantity}"/></Column>
+			<Column id="ManufacturerName" ><Text text="{i18n>ManufacturerName}"/></Column>
+			<Column id="ManufacturerPartID" ><Text text="{i18n>ManufacturerPartID}"/></Column>
+			<Column id="QuantityInterval" ><Text text="{i18n>QuantityInterval}"/></Column>
+			<Column id="ContractEffectiveDate" ><Text text="{i18n>ContractEffectiveDate}"/></Column>
+			<Column id="ContractExpirationDate" ><Text text="{i18n>ContractExpirationDate}"/></Column>
+			<Column id="Keywords" ><Text text="{i18n>Keywords}"/></Column>
+			<Column id="hazardousmaterials" ><Text text="{i18n>hazardousmaterials}"/></Column>
+			<Column id="TemporaryUnavailable" ><Text text="{i18n>TemporaryUnavailable}"/></Column>
+			<Column id="CreatedBy" ><Text text="{i18n>CreatedBy}"/></Column>
+			<Column id="IsLocked" ><Text text="{i18n>IsLocked}"/></Column>-->
 		</columns>
 		<items>
 			<ColumnListItem vAlign="Middle">
 				<cells>
-					<Text text="{SubscriptionID}" />
-					<Text text="{ItemUniqueKey}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-					<Text text="{SupplierName}" />
-				
-					
+					<Text text="{SubscriptionID}"/>
+					<Text text="{ItemStatus}"/>
+					<Text text="{MaterialNumber}"/>
+					<Text text="{ContractNumber}"/>
+					<Text text="{ContractLineNumber}"/>
+					<Text text="{SupplierPartID}"/>
+					<Text text="{SupplierID}"/>
+					<Text text="{ItemDescription}"/>
+					<Text text="{UnitPrice}"/>
+					<Text text="{MaterialCountryOfOrigin}"/>
+					<Text text="{UnitOfMeasure}"/>
+					<!--<Text text="{ShortName}"/>
+					<Text text="{ClassificationCodeDomain}"/>
+					<Text text="{ClassificationCodeKey}"/>
+					<Text text="{LeadTime}"/>
+					<Text text="{ContractCurrency}"/>
+					<Text text="{MinimumQuantity}"/>
+					<Text text="{ManufacturerName}"/>
+					<Text text="{ManufacturerPartID}"/>
+					<Text text="{QuantityInterval}"/>
+					<Text text="{ContractEffectiveDate}"/>
+					<Text text="{ContractExpirationDate}"/>
+					<Text text="{Keywords}"/>
+					<Text text="{hazardousmaterials}"/>
+					<Text text="{TemporaryUnavailable}"/>
+					<Text text="{CreatedBy}"/>
+					<Text text="{IsLocked}"/>-->
 				</cells>
 			</ColumnListItem>
 		</items>
 	</Table>
+	</ScrollContainer>
 
 </core:FragmentDefinition>

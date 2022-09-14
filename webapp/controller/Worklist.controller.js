@@ -84,6 +84,20 @@ sap.ui.define([
 				this._applySearch(aTableSearchState);
 			}
 		},
+		onTblSearch: function(oEvent) {
+			var aFilters = [];
+			var oTable = this.getView().byId("idTblReqService");
+			var searchValue = oEvent.getParameter("query");
+			var oFilter = new sap.ui.model.Filter("SubscriptionID", sap.ui.model.FilterOperator.Contains, searchValue);
+			aFilters.push(oFilter);
+			
+			var mainFilter = new sap.ui.model.Filter({
+						filters: aFilters,
+						and: false
+					});	
+			oTable.getBinding("items").filter([mainFilter]);
+
+		},
 		/**
 		 * Event handler for refresh event. Keeps filter, sort
 		 * and group settings and refreshes the list binding.

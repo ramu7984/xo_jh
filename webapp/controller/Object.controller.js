@@ -38,6 +38,8 @@ sap.ui.define([
 				oViewModel.setProperty("/delay", iOriginalBusyDelay);
 			});
 		},
+		
+
 
 		/* =========================================================== */
 		/* event handlers                                              */
@@ -124,8 +126,18 @@ sap.ui.define([
 				oObject = oView.getBindingContext().getObject(),
 				sObjectId = oObject.GenID,
 				sObjectName = oObject.B2BAgreementIndicator;
+				this.getView().byId("contractIDHeader").setText(oObject.ContractID);
+				this.getView().byId("contractID").setText(oObject.ContractID);
+				this.getView().byId("subscriptionID").setText(oObject.SubscriptionID);
+				this.getView().byId("NINECOMID").setText(oObject.NINECOMID);
+			this.getView().byId("rejectionComments").setText(oObject.RejectionComments);
+				this.getView().byId("subscriptionStatus").setText(oObject.SubscriptionStatus);
 
 			oViewModel.setProperty("/busy", false);
+			this.getView().setModel("selectedModel", oObject);
+			oViewModel.setProperty("/selObj", oObject);
+			
+			
 
 			oViewModel.setProperty("/shareSendEmailSubject",
 				oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));

@@ -1,27 +1,21 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fr="sap.f" xmlns:t="sap.ui.table"
 	xmlns:f="sap.ui.layout.form" controllerName="com.aramco.b2b.Catalog.controller.Worklist" height="100%">
+	
 	<Page showHeader="false" showFooter="true">
+	
 		<content>
-			<Toolbar class="sapUiSizeCompact headerBackColor" width="100%" visible="true">
-				<!--<Button type="Back" tooltip="Back"/>-->
+			<!--<Toolbar class="sapUiSizeCompact headerBackColor" width="100%" visible="true">
 				<Image src="./img/Aramco.jpg" width="8%">
-					<!--<layoutData>-->
-					<!--	<FlexItemData growFactor="0"/>-->
-					<!--</layoutData>-->
 				</Image>
-				<!--<ToolbarSpacer />-->
 				<Label text="{i18n>appTitle}" design="Bold" class="headingText"/>
 				<ToolbarSpacer></ToolbarSpacer>
-				<!--<SearchField liveChange=".onSearch" search="onSearchProduct" placeholder="" tooltip="" width="90%"></SearchField>-->
 				<HBox visible="{=!${device>/system/phone}}">
-					<!--<ImageContent src="sap-icon://person-placeholder"/>-->
 					<fr:Avatar displaySize="XS" backgroundColor="Transparent"/>
 					<Label text="Ramakrishna" design="Bold" class="sapUiTinyMarginEnd"/>
-					
 					<Label text=" Phone :" design="Bold"/>
 					<Text text="+966 56 XXX XXXXX"/>
 				</HBox>
-			</Toolbar>
+			</Toolbar>-->
 			<HBox visible="{=!${device>/system/phone}}">
 			<Label text="" design="Bold" class="sapUiTinyMarginEnd"/>
 				</HBox>
