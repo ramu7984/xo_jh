@@ -1,0 +1,19 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="B2B.services.b2bodata">
+			<EntityType Name="CatalogHeaderType">
+				<Key><PropertyRef Name="GenID"/></Key><Property Name="GenID" Type="Edm.String" Nullable="false" MaxLength="40"/><Property Name="SubscriptionID" Type="Edm.String" MaxLength="30"/><Property Name="SupplierERPID" Type="Edm.String" MaxLength="10"/><Property Name="ContractID" Type="Edm.String" MaxLength="10"/><Property Name="ContractType" Type="Edm.String" MaxLength="4"/><Property Name="PurchaseGroup" Type="Edm.String" MaxLength="4"/><Property Name="NINECOMID" Type="Edm.String" MaxLength="10"/><Property Name="ContractExpiryDate" Type="Edm.DateTime"/><Property Name="ContractCurrency" Type="Edm.String" MaxLength="3"/><Property Name="B2BAgreementIndicator" Type="Edm.String" MaxLength="1"/><Property Name="ItemUpdateControl" Type="Edm.String" MaxLength="1"/><Property Name="PriceUpdateControl" Type="Edm.String" MaxLength="1"/><Property Name="SubscriptionStatus" Type="Edm.String" MaxLength="1"/><Property Name="ChangeInitiator" Type="Edm.String" MaxLength="1"/><Property Name="CIFCreationStatus" Type="Edm.String" MaxLength="1"/><Property Name="SupplierANID" Type="Edm.String" MaxLength="20"/><Property Name="ActiveVersionID" Type="Edm.Int32"/><Property Name="CreatedBy" Type="Edm.String" MaxLength="20"/><Property Name="CreationTimestamp" Type="Edm.String" MaxLength="20"/><Property Name="LastChangedBy" Type="Edm.String" MaxLength="20"/><Property Name="LastChangedTimestamp" Type="Edm.String" MaxLength="20"/><Property Name="IsLocked" Type="Edm.String" MaxLength="20"/><Property Name="SupplierEmail" Type="Edm.String" MaxLength="20"/><Property Name="ChildSubscriptionStatus" Type="Edm.String" MaxLength="20"/><Property Name="RejectionComments" Type="Edm.String" MaxLength="20"/></EntityType>
+			<EntityType Name="Paramater1Type">
+				<Key><PropertyRef Name="SelectIndex"/></Key><Property Name="SelectIndex" Type="Edm.Int32" Nullable="false"/><Property Name="Value" Type="Edm.String" MaxLength="40"/></EntityType>
+			<EntityType Name="Paramater2Type">
+				<Key><PropertyRef Name="SelectIndex"/></Key><Property Name="SelectIndex" Type="Edm.Int32" Nullable="false"/><Property Name="Value" Type="Edm.String" MaxLength="40"/></EntityType>
+			<EntityType Name="Paramater3Type">
+				<Key><PropertyRef Name="SelectIndex"/></Key><Property Name="SelectIndex" Type="Edm.Int32" Nullable="false"/><Property Name="Value" Type="Edm.String" MaxLength="40"/></EntityType>
+			<EntityType Name="Paramater4Type">
+				<Key><PropertyRef Name="SelectIndex"/></Key><Property Name="SelectIndex" Type="Edm.Int32" Nullable="false"/><Property Name="Value" Type="Edm.String" MaxLength="40"/></EntityType>
+			<EntityContainer Name="b2bodata" m:IsDefaultEntityContainer="true"><EntitySet Name="CatalogHeader" EntityType="B2B.services.b2bodata.CatalogHeaderType"/><EntitySet Name="Paramater1" EntityType="B2B.services.b2bodata.Paramater1Type"/><EntitySet Name="Paramater2" EntityType="B2B.services.b2bodata.Paramater2Type"/><EntitySet Name="Paramater3" EntityType="B2B.services.b2bodata.Paramater3Type"/><EntitySet Name="Paramater4" EntityType="B2B.services.b2bodata.Paramater4Type"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
