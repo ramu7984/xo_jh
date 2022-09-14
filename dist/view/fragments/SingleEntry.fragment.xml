@@ -1,0 +1,90 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified"
+	xmlns:core="sap.ui.core">
+	<IconTabBar upperCase="true" expandable="false" applyContentPadding="true" stretchContentHeight="true" class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Item Details">
+				<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
+					<Label text="Supplier Part ID"/>
+					<Input xmlns="sap.m" value="{SupplierPartID}"/>
+					<Label text="Item Description"/>
+					<Input xmlns="sap.m" value="{ItemDescription}"/>
+					<Label text="Unit Price"/>
+					<Input xmlns="sap.m" value="{UnitPrice}"/>
+					<Label text="Unit of Measure"/>
+					<Input xmlns="sap.m" value="{UnitOfMeasure}"/>
+					<Label text="Short Name"/>
+					<Input xmlns="sap.m" value="{ShortName}"/>
+					<Label text="Manufacturer Name"/>
+					<Input value="{ManufacturerName}"/>
+					<Label text="Manufacturer Part ID"/>
+					<Input value="{ManufacturerPartID}"/>
+					<Label text="custom- Country of Origin"/>
+					<Input value="{MaterialCountryOfOrigin}"/>
+					<Label text="Lead Time"/>
+					<Input value="{LeadTime}"/>
+					<Label text="Minimum Quantity"/>
+					<Input value="{MinimumQuantity}"/>
+					<Label text="Quantity Interval"/>
+					<Input value="{QuantityInterval}"/>
+					<Label text="Keywords"/>
+					<Input value="{Keywords}"/>
+					<Label text="hazardousmaterials"/>
+					<CheckBox text="" selected="{path: 'hazardousmaterials',formatter: '.formatter.returnBoolean'}"/>
+					<Label text="green"/>
+					<CheckBox text="" selected="{path: 'green',formatter: '.formatter.returnBoolean'}"/>
+				</f:SimpleForm>
+			</IconTabFilter>
+			<IconTabFilter text="Item Images">
+				<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
+					<Label text="Image1"/>
+					<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+					<Label text="Image2"/>
+					<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+					<Label text="Image3"/>
+					<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+					<Label text="Image4"/>
+					<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+					<Label text="Image5"/>
+					<u:FileUploader name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+				</f:SimpleForm>
+			</IconTabFilter>
+			<IconTabFilter text="Related Items">
+				<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
+					<Label text="RelatedItem1"/>
+					<Input value="{RelatedItem1}"/>
+					<Label text="RelatedItem2"/>
+					<Input value="{RelatedItem2}"/>
+					<Label text="RelatedItem3"/>
+					<Input value="{RelatedItem3}"/>
+				</f:SimpleForm>
+			</IconTabFilter>
+			<IconTabFilter text="Item Specification Key Value Pairs">
+				<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
+					<Label text="Item Specification1-Key"/>
+					<Input value="{ItemSpecification1Key}"/>
+					<Label text="Item Specification1-Value"/>
+					<Input value="{ItemSpecification1Value}"/>
+					<Label text="Item Specification2-Key"/>
+					<Input value="{ItemSpecification2Key}"/>
+					<Label text="Item Specification2-Value"/>
+					<Input value="{ItemSpecification2Value}"/>
+				</f:SimpleForm>
+			</IconTabFilter>
+			<IconTabFilter text="Parametric Key Value Pairs">
+				<f:SimpleForm layout="ResponsiveGridLayout" editable="true" title="">
+					<Label text="Parametric1-Key"/>
+					<Input value="{Parameter1Key}"/>
+					<Label text="Parametric1-Value"/>
+					<Input value="{Parameter1Value}"/>
+					<Label text="Parametric2-Key"/>
+					<Input value="{Parameter2Key}"/>
+					<Label text="Parametric2-Value"/>
+					<Input value="{Parameter2Value}"/>
+				</f:SimpleForm>
+			</IconTabFilter>
+		</items>
+		<layoutData>
+			<FlexItemData growFactor="1" baseSize="0%"/>
+		</layoutData>
+	</IconTabBar>
+</core:FragmentDefinition>
